@@ -24,7 +24,7 @@ public class Producto {
 	@NotNull
 	@Column(name="nombre")
 	private String nombre;
-	
+	/*Comentario*/
 	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="id_tipoProducto")
 	private TipoProducto tipoProducto;
