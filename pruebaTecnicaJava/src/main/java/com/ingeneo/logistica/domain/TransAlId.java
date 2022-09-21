@@ -1,5 +1,6 @@
 package com.ingeneo.logistica.domain;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 public class TransAlId implements Serializable {
