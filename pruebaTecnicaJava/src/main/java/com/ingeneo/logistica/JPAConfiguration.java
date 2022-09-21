@@ -38,9 +38,9 @@ public class JPAConfiguration {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("org.postgresql.Driver");
-		dataSource.setUrl("jdbc:postgresql://localhost:5432/LOGISTERRAMAR");
-		dataSource.setUsername("postgres");
-		dataSource.setPassword("@Postgres2022");
+		dataSource.setUrl("jdbc:postgresql://ec2-34-200-205-45.compute-1.amazonaws.com:5432/d69c1n627cr4u9");
+		dataSource.setUsername("azrfcmygdcmxzd");
+		dataSource.setPassword("a1fc2689f07a35fcbf3fedc8f072de82440f62f7caacee6b84bd9466706aeb84");
 		
 		return dataSource;
 	}
