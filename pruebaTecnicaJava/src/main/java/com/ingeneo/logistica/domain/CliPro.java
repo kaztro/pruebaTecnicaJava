@@ -23,11 +23,11 @@ public class CliPro {
 	private Integer id_producto;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_cliente")
+	@JoinColumn(name = "id_cliente", insertable=false, updatable=false)
 	private Cliente cliente;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_producto")
+	@JoinColumn(name = "id_producto", insertable=false, updatable=false)
 	private Producto producto;
 	
 	public CliPro() {

@@ -23,11 +23,10 @@ public class JPAConfiguration {
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-		
 		em.setDataSource(dataSource());
 		em.setPersistenceUnitName("logistica");
-		em.setPackagesToScan("com.ingeneo.logistica.domains");
-		
+		em.setPackagesToScan("com.ingeneo.logistica.domain");
+	
 		JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		em.setJpaVendorAdapter(vendorAdapter);
 		em.setJpaProperties(hibernateProperties());

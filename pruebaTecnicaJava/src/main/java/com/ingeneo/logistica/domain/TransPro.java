@@ -28,11 +28,11 @@ public class TransPro {
 	private Float precio;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_transporte")
+	@JoinColumn(name = "id_transporte", insertable=false, updatable=false)
 	private Transporte transporte;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_producto")
+	@JoinColumn(name = "id_producto", insertable=false, updatable=false)
 	private Producto producto;
 
 	public Integer getId_transporte() {

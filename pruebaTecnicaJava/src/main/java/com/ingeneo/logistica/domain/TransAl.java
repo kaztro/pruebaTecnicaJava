@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -16,6 +17,7 @@ import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
+@IdClass(TransAlId.class)
 @Table(schema = "public", name = "TRANSPORTEXALMACEN")
 public class TransAl {
 	@Id
@@ -24,7 +26,7 @@ public class TransAl {
 	
 	@Id
 	@Column(name = "id_almacen")
-	private Integer Integer;
+	private Integer id_almacen;
 	
 	@NotNull
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
@@ -39,11 +41,11 @@ public class TransAl {
 	private String nGuia;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_transporte")
+	@JoinColumn(name = "id_transporte", insertable=false, updatable=false)
 	private Transporte transporte;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_almacen")
+	@JoinColumn(name = "id_almacen", insertable=false, updatable=false)
 	private Almacen almacen;
 
 	public Integer getId_transporte() {
@@ -54,12 +56,12 @@ public class TransAl {
 		this.id_transporte = id_transporte;
 	}
 
-	public Integer getInteger() {
-		return Integer;
+	public Integer getId_almacen() {
+		return id_almacen;
 	}
 
-	public void setInteger(Integer integer) {
-		Integer = integer;
+	public void setId_almacen(Integer id_almacen) {
+		this.id_almacen = id_almacen;
 	}
 
 	public Date getfEntrega() {

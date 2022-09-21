@@ -31,11 +31,11 @@ public class CliTrans {
 	private Date fRegistro;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_cliente")
+	@JoinColumn(name = "id_cliente", insertable=false, updatable=false)
 	private Cliente cliente;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_transporte")
+	@JoinColumn(name = "id_transporte", insertable=false, updatable=false)
 	private Transporte transporte;
 	
 	public CliTrans() {

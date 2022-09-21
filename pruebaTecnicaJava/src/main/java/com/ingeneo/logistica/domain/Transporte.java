@@ -3,6 +3,7 @@ package com.ingeneo.logistica.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -14,6 +15,10 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(schema="public", name="TRANSPORTE")
 public class Transporte {
+	
+	@Id
+	@Column(name="ID")
+	private Integer id_transporte;
 	
 	@Column(name="placa")
 	@Size(message="Como maximo puede ingresar solo 6 caracteres.", max=6)
