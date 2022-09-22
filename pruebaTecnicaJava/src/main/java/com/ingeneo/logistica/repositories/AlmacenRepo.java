@@ -10,7 +10,7 @@ import com.ingeneo.logistica.domain.Almacen;
 
 public interface AlmacenRepo extends JpaRepository<Almacen, Integer> {
 	
-    @Query(nativeQuery=true, value="")
+    @Query(nativeQuery=true, value="Select * from public.almacen where nombre = ?1")
     public List<Almacen> findByName(String name) throws DataAccessException;
 
 }
