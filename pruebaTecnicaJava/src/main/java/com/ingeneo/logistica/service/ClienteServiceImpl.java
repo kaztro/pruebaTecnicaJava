@@ -11,7 +11,7 @@ import com.ingeneo.logistica.repositories.ClienteRepo;
 
 @Service
 public class ClienteServiceImpl implements ClienteService {
-	
+	//Implementación del servicio
 	@Autowired
 	public ClienteRepo clienteRepo;
 	

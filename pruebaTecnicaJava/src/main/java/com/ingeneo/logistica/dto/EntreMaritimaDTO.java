@@ -1,6 +1,7 @@
 package com.ingeneo.logistica.dto;
 
 public class EntreMaritimaDTO {
+	//DTO que será utilizado para consultar los pedido de logistica terrestre
 	private String tipoProducto;
 	private Integer cantProducto;
 	private String fRegistro;

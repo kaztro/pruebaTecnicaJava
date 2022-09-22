@@ -15,6 +15,8 @@ import com.ingeneo.logistica.service.ClienteService;
 
 @Controller
 public class MainController {
+    //Controlador principal para gestionar las vistas
+
     //@Autowired
     //private AlmacenService almacenService;
 
@@ -27,6 +29,7 @@ public class MainController {
     //@Autowired
     //private TransporteService transporteService;
 
+    //Lista de TODOS los clientes
     @RequestMapping("/listClientes")
     public ModelAndView listaClientes() {
         ModelAndView mav = new ModelAndView();

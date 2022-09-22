@@ -15,7 +15,6 @@ import javax.validation.constraints.NotNull;
 @Entity
 @Table(schema="public", name="ALMACEN")
 public class Almacen {
-	
 	@Id
 	@Column(name="ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
