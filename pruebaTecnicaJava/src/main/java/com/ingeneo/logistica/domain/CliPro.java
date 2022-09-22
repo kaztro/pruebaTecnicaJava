@@ -8,6 +8,7 @@ import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @IdClass(CliProId.class)
@@ -30,6 +31,18 @@ public class CliPro {
 	@JoinColumn(name = "id_producto", insertable=false, updatable=false)
 	private Producto producto;
 	
+	@NotNull
+	@Column(name = "cantidad")
+	private Integer cantidad;
+
+	public Integer getCantidad() {
+		return cantidad;
+	}
+
+	public void setCantidad(Integer cantidad) {
+		this.cantidad = cantidad;
+	}
+
 	public CliPro() {
 		
 	}

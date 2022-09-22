@@ -27,6 +27,10 @@ public class TransPro {
 	@Column(name = "precio")
 	private Float precio;
 	
+	@NotNull
+	@Column(name = "descuento")
+	private Float descuento;
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_transporte", insertable=false, updatable=false)
 	private Transporte transporte;
